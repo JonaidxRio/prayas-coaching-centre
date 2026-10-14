@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth transition-colors duration-500">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f8fafc" id="meta-theme-color">
+  <meta name="description" content="Get in touch with Prayas Coaching Centre for admissions, courses, scholarships, and inquiries. Visit us in Bongaigaon, Assam.">
+  <title>Contact Us - Prayas Coaching Centre</title>
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Theme Initialization Script (Prevents FOUC) -->
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    // Default is Light unless explicitly set to Dark
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.getElementById('meta-theme-color')?.setAttribute('content', '#030712');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.getElementById('meta-theme-color')?.setAttribute('content', '#f8fafc');
+    }
+  </script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0f172a',
+            },
+            royal: {
+              50: '#f0f4ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#172554',
+              950: '#0b1329',
+            },
+            surface: {
+              base: '#030712',
+              card: 'rgba(15, 23, 42, 0.65)',
+              glass: 'rgba(255, 255, 255, 0.03)',
+              border: 'rgba(255, 255, 255, 0.08)',
+              highlight: 'rgba(255, 255, 255, 0.15)',
+            }
+          },
+          boxShadow: {
+            'glow-sm': '0 0 20px -5px rgba(59, 130, 246, 0.3)',
+            'glow-md': '0 0 35px -5px rgba(37, 99, 235, 0.4)',
+            'glow-lg': '0 0 50px -10px rgba(59, 130, 246, 0.5)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.45)',
+            'premium': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+            'inner-glow': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)',
+            'inner-glow-light': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.8)',
+          },
+          animation: {
+            'float-slow': 'floating 8s ease-in-out infinite',
+            'float-fast': 'floating 5s ease-in-out infinite',
+            'float-reverse': 'floating-reverse 7s ease-in-out infinite',
+            'pulse-subtle': 'pulseGlow 6s ease-in-out infinite',
+            'beam': 'beam 4s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'radar': 'radar 3s linear infinite',
+          },
+          keyframes: {
+            floating: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(0.8deg)' },
+            },
+            'floating-reverse': {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(12px) rotate(-0.8deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.25', transform: 'scale(1)' },
+              '50%': { opacity: '0.55', transform: 'scale(1.08)' },
+            },
+            beam: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' },
+            },
+            radar: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Absolute safeguard against horizontal scroll bugs */
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    
+    /* Premium Theming CSS Variables */
+    :root {
+      --spotlight-color: rgba(59, 130, 246, 0.04);
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --spotlight-border: rgba(96, 165, 250, 0.15);
+      --scrollbar-track: #f1f5f9;
+      --scrollbar-thumb: #cbd5e1;
+      --scrollbar-thumb-hover: #94a3b8;
+    }
+    .dark {
+      --spotlight-color: rgba(59, 130, 246, 0.08);
+      --card-bg: rgba(15, 23, 42, 0.6);
+      --spotlight-border: rgba(96, 165, 250, 0.35);
+      --scrollbar-track: #030712;
+      --scrollbar-thumb: #1e293b;
+      --scrollbar-thumb-hover: #3b82f6;
+    }
+
+    /* Global Transition for Smooth Theme Switching */
+    body {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* Noise texture overlay for luxury tactile feel */
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    /* Hardware accelerated smooth reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px) scale(0.98);
+      filter: blur(4px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity, filter;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    /* Staggered transition children */
+    .reveal-delay-1 { transition-delay: 100ms; }
+    .reveal-delay-2 { transition-delay: 200ms; }
+    .reveal-delay-3 { transition-delay: 300ms; }
+    .reveal-delay-4 { transition-delay: 400ms; }
+
+    /* Interactive Spotlight Card effect */
+    .spotlight-card {
+      position: relative;
+      background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--spotlight-color), transparent 45%),
+                  var(--card-bg);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .spotlight-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--spotlight-border), transparent 40%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 0;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+
+    /* Gradient Border Shimmer Button */
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.22) 50%,
+        transparent 65%
+      );
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .shimmer-btn:hover::after {
+      transform: translateX(100%);
+    }
+
+    /* Mobile thumb-friendly tap target optimizations */
+    @media (max-width: 640px) {
+      .tap-target {
+        min-height: 48px;
+        min-width: 48px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-surface-base dark:text-slate-100 font-sans selection:bg-brand-600 selection:text-white antialiased overflow-x-hidden relative">
+
+  <!-- Grain Texture Layer -->
+  <div class="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 dark:opacity-60 transition-opacity duration-500" aria-hidden="true"></div>
+
+  <!-- Global Dynamic Mesh Lighting -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-brand-500/10 via-indigo-500/5 to-transparent dark:from-brand-600/15 dark:via-indigo-600/10 rounded-full blur-[140px] animate-pulse-subtle"></div>
+    <div class="absolute top-[40%] -left-64 w-[500px] h-[500px] bg-blue-500/5 dark:bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute top-[70%] -right-64 w-[550px] h-[550px] bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none"></div>
+  </div>
+
+  <!-- Top Announcement Bar / Micro Notch -->
+  <div class="relative z-50 bg-white/90 border-b border-slate-200 backdrop-blur-md dark:bg-slate-950/90 dark:border-white/[0.06] px-4 py-2 text-center text-xs sm:text-[13px] font-medium text-slate-600 dark:text-slate-300 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-brand-50 text-brand-600 border border-brand-200 dark:bg-brand-500/15 dark:text-blue-400 dark:border-brand-500/30 uppercase tracking-wider transition-colors duration-500">Admissions 2026</span>
+      <span>Limited seats open for Classes VIII, IX &amp; X (ASSEB Division-I).</span>
+      <a href="contact.html" class="hidden sm:inline-flex items-center text-brand-600 hover:text-brand-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold underline underline-offset-4 ml-1 transition-colors">
+        Enroll Today &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       REBUILT NAVIGATION BAR (Mobile-First, Glassmorphic, Accessible)
+  ======================================================== -->
+  <header id="navbar-header" class="sticky top-0 z-50 transition-all duration-300 pt-2 min-[375px]:pt-3">
+    <div class="max-w-7xl mx-auto px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
+      <nav class="relative rounded-2xl bg-white/80 border border-slate-200/60 shadow-sm backdrop-blur-2xl dark:bg-slate-950/80 dark:border-white/[0.08] dark:shadow-glass px-2.5 min-[375px]:px-4 sm:px-6 h-[64px] sm:h-[72px] flex items-center justify-between transition-all duration-300 w-full" aria-label="Main Navigation">
+        
+        <!-- Left Side: Logo & Brand Text -->
+        <a href="/frontend/index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-xl p-1 flex-1 min-w-0 shrink">
+          <div class="relative flex items-center justify-center shrink-0">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-sky-400 p-[1px] shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300">
+              <div class="w-full h-full bg-white dark:bg-slate-950 rounded-[10px] sm:rounded-[11px] flex items-center justify-center text-slate-900 dark:text-white font-extrabold text-base sm:text-xl font-mono tracking-wider group-hover:scale-105 transition-transform duration-300">
+                P
+              </div>
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-500 border-2 border-white dark:border-slate-950 rounded-full transition-colors duration-500" title="Active Sessions"></span>
+          </div>
+          <div class="flex flex-col text-left min-w-0 flex-1 shrink">
+            <span class="font-extrabold text-slate-900 dark:text-white text-[13px] min-[375px]:text-sm sm:text-base tracking-tight truncate group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+              Prayas Coaching Centre
+            </span>
+            <span class="text-[9px] min-[375px]:text-[10px] sm:text-[11px] font-semibold text-slate-500 dark:text-slate-400 tracking-widest uppercase font-mono truncate transition-colors duration-500">
+              Learn • Grow • Succeed
+            </span>
+          </div>
+        </a>
+
+        <!-- Right Side: Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center gap-1 bg-slate-100/50 dark:bg-white/[0.02] p-1.5 rounded-xl border border-slate-200/50 dark:border-white/[0.05] transition-colors duration-500">
+          <a href="/frontend/index.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Home</a>
+          <a href="about.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">About</a>
+          <a href="courses.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Courses</a>
+          <a href="teachers.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Teachers</a>
+          <a href="gallery.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Gallery</a>
+          <a href="results.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Results</a>
+          <a href="notices.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Notices</a>
+          <a href="contact.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-white text-slate-900 shadow-sm dark:bg-white/[0.08] dark:text-white dark:shadow-inner-glow transition-all duration-200" aria-current="page">Contact</a>
+        </div>
+
+        <!-- Desktop Actions: Theme Toggle & Login CTA -->
+        <div class="hidden lg:flex items-center gap-3 shrink-0 ml-3">
+          <!-- Theme Toggle (Desktop) -->
+          <button type="button" class="theme-toggle-btn tap-target relative inline-flex h-8 w-14 shrink-0 cursor-pointer items-center rounded-full bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300/60 dark:border-white/10 shadow-inner backdrop-blur-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950 transition-colors duration-500" aria-label="Toggle theme">
+            <span class="sr-only">Toggle theme</span>
+            <span class="absolute left-1 flex h-6 w-6 transform items-center justify-center rounded-full bg-white dark:bg-slate-950 shadow-[0_2px_5px_rgba(0,0,0,0.15)] dark:shadow-[0_2px_5px_rgba(0,0,0,0.4)] border border-slate-100 dark:border-white/5 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] translate-x-0 dark:translate-x-6">
+              <i data-lucide="sun" class="w-3.5 h-3.5 text-amber-500 transition-all duration-500 opacity-100 scale-100 dark:opacity-0 dark:scale-50 absolute"></i>
+              <i data-lucide="moon" class="w-3 h-3 text-blue-400 transition-all duration-500 opacity-0 scale-50 dark:opacity-100 dark:scale-100 absolute"></i>
+            </span>
+          </button>
+          
+          <a href="login.html" class="shimmer-btn inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-600 via-royal-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-glow-sm hover:shadow-glow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 focus:outline-none focus:ring-2 focus:ring-brand-400">
+            <i data-lucide="user" class="w-4 h-4 mr-2"></i>
+            <span>Student Login</span>
+          </a>
+        </div>
+
+        <!-- Mobile Actions: Theme, Login & Hamburger -->
+        <div class="flex items-center gap-1.5 min-[375px]:gap-2 lg:hidden shrink-0 ml-1.5">
+          <!-- Theme Toggle (Mobile - Premium Pill) -->
+          <button type="button" class="theme-toggle-btn tap-target relative inline-flex h-7 w-12 shrink-0 cursor-pointer items-center rounded-full bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300/60 dark:border-white/10 shadow-inner backdrop-blur-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors duration-500" aria-label="Toggle theme">
+            <span class="sr-only">Toggle theme</span>
+            <span class="absolute left-1 flex h-5 w-5 transform items-center justify-center rounded-full bg-white dark:bg-slate-950 shadow-[0_2px_5px_rgba(0,0,0,0.15)] dark:shadow-[0_2px_5px_rgba(0,0,0,0.4)] border border-slate-100 dark:border-white/5 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] translate-x-0 dark:translate-x-5">
+              <i data-lucide="sun" class="w-3 h-3 text-amber-500 transition-all duration-500 opacity-100 scale-100 dark:opacity-0 dark:scale-50 absolute"></i>
+              <i data-lucide="moon" class="w-3 h-3 text-blue-400 transition-all duration-500 opacity-0 scale-50 dark:opacity-100 dark:scale-100 absolute"></i>
+            </span>
+          </button>
+
+          <a href="login.html" class="px-2 py-1.5 min-[375px]:px-2.5 min-[375px]:py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 transition-colors shadow-glow-sm flex items-center justify-center min-h-[44px] min-w-[44px] shrink-0">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span class="hidden min-[430px]:inline ml-1.5">Login</span>
+          </a>
+          <button id="mobile-menu-button" type="button" class="tap-target p-1.5 min-[375px]:p-2 rounded-xl text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-white/[0.08] dark:hover:text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-200 flex items-center justify-center shrink-0 min-h-[44px] min-w-[44px]" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+            <span class="sr-only">Open main menu</span>
+            <i data-lucide="menu" id="menu-icon" class="w-5 h-5 min-[375px]:w-6 min-[375px]:h-6"></i>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-slate-900/40 backdrop-blur-md dark:bg-slate-950/80 dark:backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden z-40" aria-hidden="true"></div>
+
+    <!-- Full-Screen Slide-In Mobile Menu from the Right -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full max-w-[320px] sm:max-w-sm bg-white/95 backdrop-blur-2xl border-l border-slate-200 shadow-2xl dark:bg-slate-950/98 dark:border-white/10 transform translate-x-full transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden z-50 flex flex-col overflow-y-auto" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+      
+      <!-- Mobile Menu Header -->
+      <div class="px-5 py-5 sm:p-6 flex items-center justify-between border-b border-slate-100 dark:border-white/[0.08] transition-colors duration-500">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-sky-400 p-[1px] shadow-glow-sm shrink-0">
+            <div class="w-full h-full bg-white dark:bg-slate-950 rounded-[11px] flex items-center justify-center text-white font-extrabold text-base font-mono transition-colors duration-500">
+              P
+            </div>
+          </div>
+          <div class="min-w-0 shrink">
+            <div class="font-extrabold text-slate-900 dark:text-white text-sm tracking-tight truncate transition-colors duration-500">Prayas Coaching Centre</div>
+            <div class="text-[10px] font-semibold text-slate-500 dark:text-slate-400 tracking-wider uppercase font-mono truncate transition-colors duration-500">Navigation Menu</div>
+          </div>
+        </div>
+        <button id="mobile-menu-close" type="button" class="tap-target p-2 rounded-xl text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-white/[0.08] border border-transparent focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Links List -->
+      <div class="px-5 py-6 space-y-2 flex-1">
+        <a href="../frontend/index.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="home" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="about.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="info" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> About</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="courses.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="book-open" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Courses</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="teachers.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="users" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Teachers</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="gallery.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="image" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Gallery</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="results.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="award" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Results</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="notices.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="bell" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Notices</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="contact.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-semibold text-brand-600 bg-brand-50 border border-brand-100 dark:text-blue-400 dark:bg-brand-500/10 dark:border-brand-500/20 min-h-[56px] transition-colors duration-500" aria-current="page">
+          <span class="flex items-center gap-3.5"><i data-lucide="mail" class="w-[18px] h-[18px]"></i> Contact</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Drawer Footer CTA -->
+      <div class="px-5 py-6 border-t border-slate-100 bg-slate-50 dark:border-white/[0.08] dark:bg-slate-950/50 transition-colors duration-500">
+        <a href="login.html" class="mobile-nav-link group flex items-center justify-center w-full px-5 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 shadow-glow-sm min-h-[56px] transition-transform hover:-translate-y-0.5 active:translate-y-0">
+          <i data-lucide="user" class="w-5 h-5 mr-2"></i>
+          <span>Student Login</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================
+       1. HERO SECTION
+  ======================================================== -->
+  <section class="relative min-h-[calc(70vh-80px)] flex items-center justify-center overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28 w-full">
+    <!-- Background Technical Grid & Radial Aura -->
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1.2px,transparent_1.2px)] dark:bg-[radial-gradient(#3b82f6_1.2px,transparent_1.2px)] [background-size:36px_36px] opacity-[0.25] dark:opacity-[0.14] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/80 to-slate-50 dark:via-slate-950/60 dark:to-slate-950 pointer-events-none transition-colors duration-500"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
+      
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/60 border border-slate-200 text-brand-600 dark:bg-slate-900/80 dark:border-white/10 dark:text-blue-400 text-[11px] min-[375px]:text-xs sm:text-sm font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-xl mb-6 reveal active transition-colors duration-500">
+        <i data-lucide="headset" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-500 fill-emerald-500 dark:text-emerald-400 dark:fill-emerald-400"></i>
+        <span class="text-slate-700 dark:text-slate-200">We're Here to Help</span>
+      </div>
+
+      <h1 class="text-3xl min-[375px]:text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] sm:leading-[1.1] text-balance reveal active reveal-delay-1 transition-colors duration-500">
+        Let's Start Your Learning <br class="hidden sm:inline">
+        <span class="bg-gradient-to-r from-brand-600 via-indigo-600 to-sky-500 dark:from-blue-400 dark:via-indigo-300 dark:to-brand-500 bg-clip-text text-transparent">Journey</span>
+      </h1>
+
+      <p class="text-sm min-[375px]:text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto mt-5 sm:mt-6 font-normal reveal active reveal-delay-2 transition-colors duration-500">
+        Whether you have questions about admissions, courses or scholarships, our team is always ready to assist you.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       2. QUICK ACTION CARDS (MOBILE PRIORITY)
+  ======================================================== -->
+  <section class="relative pb-20 sm:pb-32 overflow-hidden bg-slate-50 dark:bg-surface-base transition-colors duration-500 w-full z-20 -mt-10 sm:-mt-16">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 w-full reveal active reveal-delay-3">
+        
+        <!-- Call Now -->
+        <a href="tel:+91XXXXXXXXXX" class="spotlight-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-0">
+          <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-brand-50 text-brand-600 dark:bg-blue-500/10 dark:text-blue-400 flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300 shadow-inner shrink-0">
+            <i data-lucide="phone" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <h3 class="text-[13px] sm:text-base font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 w-full truncate">Call Now</h3>
+          <p class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono transition-colors duration-500 w-full truncate">+91 XXXXX XXXXX</p>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="spotlight-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-0">
+          <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400 flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300 shadow-inner shrink-0">
+            <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <h3 class="text-[13px] sm:text-base font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 w-full truncate">WhatsApp</h3>
+          <p class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono transition-colors duration-500 w-full truncate">Chat with us</p>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:info@prayascoaching.com" class="spotlight-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-0">
+          <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400 flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-inner shrink-0">
+            <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <h3 class="text-[13px] sm:text-base font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 w-full truncate">Email Us</h3>
+          <p class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono transition-colors duration-500 w-full truncate">info@prayascoaching.com</p>
+        </a>
+
+        <!-- Directions -->
+        <a href="#find-us" class="spotlight-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass flex flex-col items-center justify-center text-center group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-0">
+          <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-400 flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300 shadow-inner shrink-0">
+            <i data-lucide="navigation" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <h3 class="text-[13px] sm:text-base font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 w-full truncate">Get Directions</h3>
+          <p class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 mt-1 font-mono transition-colors duration-500 w-full truncate">View on Map</p>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. CONTACT FORM
+  ======================================================== -->
+  <section id="contact-form-section" class="relative py-20 sm:py-32 overflow-hidden bg-slate-50/70 dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-brand-500/5 dark:bg-brand-600/10 rounded-full blur-[160px] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-brand-600 dark:bg-slate-900/90 dark:border-white/10 dark:text-blue-400 text-[11px] font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-md mb-4 transition-colors duration-500">
+          <i data-lucide="send" class="w-4 h-4 text-brand-600 dark:text-blue-400"></i>
+          <span class="tracking-widest uppercase font-mono">ONLINE INQUIRY</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white transition-colors duration-500">
+          Send Us A Message
+        </h2>
+        <p class="text-sm min-[375px]:text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-4 transition-colors duration-500">
+          Fill out the form below and our team will get back to you promptly.
+        </p>
+      </div>
+
+      <div class="spotlight-card p-6 sm:p-14 rounded-3xl border border-slate-200/80 shadow-premium dark:bg-slate-900/40 dark:border-white/[0.12] dark:shadow-glass reveal transition-colors duration-500 w-full">
+        
+        <form id="contact-form" class="space-y-5 sm:space-y-6 w-full" novalidate>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 w-full">
+            
+            <!-- Full Name -->
+            <div class="space-y-1.5 sm:space-y-2 relative group w-full">
+              <label for="full-name" class="block text-[11px] sm:text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider transition-colors duration-500">
+                Full Name <span class="text-rose-500 dark:text-rose-400">*</span>
+              </label>
+              <input type="text" id="full-name" name="fullName" required placeholder="Enter student or guardian name" class="w-full bg-white border border-slate-200 shadow-sm dark:bg-slate-950/80 dark:border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-[13px] sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-300">
+              <span id="name-error" class="text-[11px] sm:text-xs text-rose-500 dark:text-rose-400 hidden absolute -bottom-5 left-1 transition-colors duration-500">Please enter your full name.</span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="space-y-1.5 sm:space-y-2 relative group w-full">
+              <label for="phone-number" class="block text-[11px] sm:text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider transition-colors duration-500">
+                Phone Number <span class="text-rose-500 dark:text-rose-400">*</span>
+              </label>
+              <input type="tel" id="phone-number" name="phoneNumber" required placeholder="Enter 10-digit mobile number" class="w-full bg-white border border-slate-200 shadow-sm dark:bg-slate-950/80 dark:border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-[13px] sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-300">
+              <span id="phone-error" class="text-[11px] sm:text-xs text-rose-500 dark:text-rose-400 hidden absolute -bottom-5 left-1 transition-colors duration-500">Please enter a valid 10-digit number.</span>
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 w-full pt-1 sm:pt-0">
+            
+            <!-- Email Address (Optional) -->
+            <div class="space-y-1.5 sm:space-y-2 relative group w-full">
+              <label for="email-address" class="block text-[11px] sm:text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider transition-colors duration-500">
+                Email Address <span class="text-slate-400 dark:text-slate-500 font-normal normal-case tracking-normal">(Optional)</span>
+              </label>
+              <input type="email" id="email-address" name="emailAddress" placeholder="Enter your email address" class="w-full bg-white border border-slate-200 shadow-sm dark:bg-slate-950/80 dark:border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-[13px] sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-300">
+              <span id="email-error" class="text-[11px] sm:text-xs text-rose-500 dark:text-rose-400 hidden absolute -bottom-5 left-1 transition-colors duration-500">Please enter a valid email.</span>
+            </div>
+
+            <!-- Class -->
+            <div class="space-y-1.5 sm:space-y-2 relative group w-full">
+              <label for="student-class" class="block text-[11px] sm:text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider transition-colors duration-500">
+                Inquiry Type <span class="text-rose-500 dark:text-rose-400">*</span>
+              </label>
+              <div class="relative w-full">
+                <select id="student-class" name="studentClass" required class="w-full bg-white border border-slate-200 shadow-sm dark:bg-slate-950/80 dark:border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-[13px] sm:text-sm text-slate-900 dark:text-white appearance-none focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-300 cursor-pointer">
+                  <option value="" disabled selected>Select option</option>
+                  <option value="Class VIII">Admission: Class VIII</option>
+                  <option value="Class IX">Admission: Class IX</option>
+                  <option value="Class X">Admission: Class X (HSLC)</option>
+                  <option value="Summer Foundation">Summer Foundation Programme</option>
+                  <option value="Scholarship">Scholarship Details</option>
+                  <option value="Other">Other Inquiry</option>
+                </select>
+                <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-500">
+                  <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+              </div>
+              <span id="class-error" class="text-[11px] sm:text-xs text-rose-500 dark:text-rose-400 hidden absolute -bottom-5 left-1 transition-colors duration-500">Please select an option.</span>
+            </div>
+
+          </div>
+
+          <!-- Message -->
+          <div class="space-y-1.5 sm:space-y-2 relative group w-full pt-1 sm:pt-0">
+            <label for="message" class="block text-[11px] sm:text-xs font-mono font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider transition-colors duration-500">
+              Message <span class="text-rose-500 dark:text-rose-400">*</span>
+            </label>
+            <textarea id="message" name="message" rows="4" required placeholder="Type your questions or admission query here..." class="w-full bg-white border border-slate-200 shadow-sm dark:bg-slate-950/80 dark:border-white/10 rounded-xl px-4 py-3 sm:py-3.5 text-[13px] sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-300 resize-none"></textarea>
+            <span id="message-error" class="text-[11px] sm:text-xs text-rose-500 dark:text-rose-400 hidden absolute -bottom-5 left-1 transition-colors duration-500">Please enter your message.</span>
+          </div>
+
+          <!-- Success Notification Banner -->
+          <div id="form-success" class="hidden p-3 sm:p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 dark:bg-emerald-500/10 dark:border-emerald-500/30 dark:text-emerald-300 text-[13px] sm:text-sm flex items-start sm:items-center gap-3 transition-colors duration-500">
+            <i data-lucide="check-circle" class="w-5 h-5 shrink-0 text-emerald-500 dark:text-emerald-400 mt-0.5 sm:mt-0"></i>
+            <span class="leading-relaxed">Thank you! Your message has been sent successfully. Our team will contact you soon.</span>
+          </div>
+
+          <!-- Form Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-end gap-3 sm:gap-4 pt-6 sm:pt-4 w-full">
+            <button type="button" id="clear-btn" class="w-full sm:w-auto px-6 py-3.5 sm:py-3 rounded-xl text-[13px] sm:text-sm font-semibold text-slate-600 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm dark:text-slate-300 dark:bg-slate-950/80 dark:hover:bg-slate-800 dark:hover:text-white dark:border-white/10 dark:shadow-none transition-all duration-200">
+              Clear Form
+            </button>
+            
+            <button id="submit-btn" type="submit" class="relative w-full sm:w-auto shimmer-btn inline-flex items-center justify-center px-8 py-3.5 sm:py-3 rounded-xl text-[13px] sm:text-sm font-bold text-white bg-gradient-to-r from-brand-600 via-royal-600 to-indigo-600 shadow-glow-sm hover:shadow-glow-md transition-all duration-200 min-w-[160px]">
+              <span id="btn-text" class="flex items-center">
+                Send Message <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+              </span>
+              <span id="btn-loading" class="hidden flex items-center">
+                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Sending...
+              </span>
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. FIND US (GOOGLE MAPS)
+  ======================================================== -->
+  <section id="find-us" class="relative py-20 sm:py-32 overflow-hidden bg-white dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-brand-600 dark:bg-slate-900/90 dark:border-white/10 dark:text-blue-400 text-[11px] font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-md mb-4 transition-colors duration-500">
+          <i data-lucide="compass" class="w-4 h-4 text-brand-600 dark:text-blue-400"></i>
+          <span class="tracking-widest uppercase font-mono">LOCATION &amp; DIRECTIONS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white transition-colors duration-500">
+          Find Us
+        </h2>
+        <p class="text-sm min-[375px]:text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-4 transition-colors duration-500">
+          Visit our coaching centre at Pulpara, Bongaigaon.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-6xl mx-auto w-full">
+        
+        <!-- Address Side -->
+        <div class="spotlight-card p-6 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass reveal reveal-delay-1 space-y-5 sm:space-y-6 flex flex-col w-full h-full transition-colors duration-500">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center shadow-inner shrink-0 transition-colors duration-500">
+            <i data-lucide="map-pin" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500">Prayas Coaching Centre</h3>
+            <p class="text-[13px] sm:text-sm text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-relaxed transition-colors duration-500">
+              Pulpara, near Janakalyan L.P. School<br>
+              Village Kabaitari Pt-IV<br>
+              Bongaigaon District, Assam - 783388
+            </p>
+            
+            <div class="mt-6 pt-5 border-t border-slate-100 dark:border-white/[0.06] space-y-3 transition-colors duration-500">
+              <div class="flex items-center gap-3">
+                 <i data-lucide="clock" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0"></i>
+                 <span class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 transition-colors duration-500">Mon-Sat: 3:00 PM - 6:00 PM</span>
+              </div>
+              <div class="flex items-center gap-3">
+                 <i data-lucide="phone" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0"></i>
+                 <span class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-mono transition-colors duration-500">+91 XXXXX XXXXX</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pt-4 mt-auto">
+            <a href="https://maps.google.com/?q=Pulpara+Kabaitari+Bongaigaon+Assam" target="_blank" rel="noopener noreferrer" class="shimmer-btn inline-flex items-center justify-center w-full px-6 py-3.5 rounded-xl text-[13px] sm:text-sm font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 shadow-glow-sm hover:shadow-glow-md transition-all">
+              <i data-lucide="navigation" class="w-4 h-4 mr-2"></i>
+              <span>Get Directions</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="lg:col-span-2 rounded-3xl overflow-hidden border border-slate-200/80 shadow-premium dark:border-white/[0.08] dark:shadow-glass h-[300px] min-[375px]:h-[350px] sm:h-[400px] lg:h-full relative reveal reveal-delay-2 bg-slate-200 dark:bg-slate-900 w-full transition-colors duration-500">
+          <!-- 
+            Note: The filter for dark mode map is handled via a CSS class applied conditionally based on the .dark class on html.
+            A generic map embed is used as placeholder. 
+          -->
+          <iframe title="Prayas Coaching Centre Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5!2d90.5!3d26.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMjQnMDAuMCJOIDkwwrAzMCcwMC4wIkU!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" class="border-0 dark:invert-[90%] dark:hue-rotate-180 transition-all duration-500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. FREQUENTLY ASKED QUESTIONS
+  ======================================================== -->
+  <section class="relative py-20 sm:py-32 overflow-hidden bg-slate-50/70 dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-brand-600 dark:bg-slate-900/90 dark:border-white/10 dark:text-blue-400 text-[11px] font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-md mb-4 transition-colors duration-500">
+          <i data-lucide="help-circle" class="w-4 h-4 text-brand-600 dark:text-blue-400"></i>
+          <span class="tracking-widest uppercase font-mono">COMMON INQUIRIES</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white transition-colors duration-500">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-sm min-[375px]:text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-4 transition-colors duration-500">
+          Clear answers to common questions about admissions and classes.
+        </p>
+      </div>
+
+      <div class="space-y-3 sm:space-y-4 w-full">
+        
+        <!-- FAQ 1 -->
+        <div class="spotlight-card rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass overflow-hidden reveal reveal-delay-1 group transition-colors duration-500">
+          <button class="faq-toggle w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between text-slate-900 dark:text-white font-bold text-[13px] min-[375px]:text-sm sm:text-base lg:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors duration-500">
+            <span>What classes do you offer?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content px-5 sm:px-6 pb-4 sm:pb-5 text-slate-600 dark:text-slate-300 text-[13px] sm:text-sm leading-relaxed border-t border-slate-100 dark:border-white/[0.04] pt-3 sm:pt-4 hidden transition-colors duration-500">
+            Class VIII to X along with Summer Foundation Programmes, specifically tailored for Assamese Medium students under the ASSEB board.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="spotlight-card rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass overflow-hidden reveal reveal-delay-2 group transition-colors duration-500">
+          <button class="faq-toggle w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between text-slate-900 dark:text-white font-bold text-[13px] min-[375px]:text-sm sm:text-base lg:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors duration-500">
+            <span>Do you offer scholarships?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content px-5 sm:px-6 pb-4 sm:pb-5 text-slate-600 dark:text-slate-300 text-[13px] sm:text-sm leading-relaxed border-t border-slate-100 dark:border-white/[0.04] pt-3 sm:pt-4 hidden transition-colors duration-500">
+            Yes. Scholarships are available for meritorious and financially deserving students. We evaluate applications on a case-by-case basis.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="spotlight-card rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass overflow-hidden reveal reveal-delay-3 group transition-colors duration-500">
+          <button class="faq-toggle w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between text-slate-900 dark:text-white font-bold text-[13px] min-[375px]:text-sm sm:text-base lg:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors duration-500">
+            <span>How can I take admission?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content px-5 sm:px-6 pb-4 sm:pb-5 text-slate-600 dark:text-slate-300 text-[13px] sm:text-sm leading-relaxed border-t border-slate-100 dark:border-white/[0.04] pt-3 sm:pt-4 hidden transition-colors duration-500">
+            Visit our coaching centre or contact us through phone or the admission inquiry form on this page. Our administrative team will guide you through the process.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="spotlight-card rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass overflow-hidden reveal reveal-delay-4 group transition-colors duration-500">
+          <button class="faq-toggle w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between text-slate-900 dark:text-white font-bold text-[13px] min-[375px]:text-sm sm:text-base lg:text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors duration-500">
+            <span>Can parents visit the coaching centre?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 dark:text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content px-5 sm:px-6 pb-4 sm:pb-5 text-slate-600 dark:text-slate-300 text-[13px] sm:text-sm leading-relaxed border-t border-slate-100 dark:border-white/[0.04] pt-3 sm:pt-4 hidden transition-colors duration-500">
+            Yes. Parents are always welcome during working hours (Monday to Saturday, 3:00 PM – 6:00 PM) to discuss their child's progress.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER SECTION (Exact Homepage Footer)
+  ======================================================== -->
+  <footer id="footer" class="relative pt-16 sm:pt-20 pb-10 sm:pb-12 overflow-hidden bg-slate-100 text-slate-600 border-t border-slate-200 dark:bg-slate-950 dark:text-slate-300 dark:border-white/[0.08] transition-colors duration-500 w-full">
+    
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-500/5 dark:bg-brand-600/10 rounded-full blur-[160px] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- 4-Column Responsive Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-8 pb-12 sm:pb-16 border-b border-slate-200 dark:border-white/[0.08] transition-colors duration-500">
+        
+        <!-- Column 1: Brand & Socials -->
+        <div class="flex flex-col items-start space-y-4 sm:space-y-5">
+          <a href="/frontend/index.html" class="flex items-center gap-3.5 group focus:outline-none">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-sky-400 p-[1px] shadow-glow-sm group-hover:scale-105 transition-transform duration-300 shrink-0">
+              <div class="w-full h-full bg-white dark:bg-slate-950 rounded-[11px] flex items-center justify-center text-slate-900 dark:text-white font-extrabold text-lg font-mono transition-colors duration-500">
+                P
+              </div>
+            </div>
+            <span class="font-extrabold text-slate-900 dark:text-white text-lg tracking-tight group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors duration-500 truncate">
+              Prayas Coaching Centre
+            </span>
+          </a>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-normal transition-colors duration-500">
+            Empowering Assamese Medium students from Classes VIII to X through quality education, expert guidance, and a commitment to academic excellence.
+          </p>
+          
+          <!-- Social Media Icons (Touch friendly) -->
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="flex flex-col space-y-4">
+          <h3 class="text-xs font-mono font-bold text-slate-900 dark:text-white tracking-widest uppercase transition-colors duration-500">Quick Links</h3>
+          <ul class="space-y-3 sm:space-y-2.5">
+            <li>
+              <a href="/frontend/index.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">About</a>
+            </li>
+            <li>
+              <a href="courses.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Courses</a>
+            </li>
+            <li>
+              <a href="teachers.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Teachers</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Gallery</a>
+            </li>
+            <li>
+              <a href="results.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Results</a>
+            </li>
+            <li>
+              <a href="notices.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Notices</a>
+            </li>
+            <li>
+              <a href="login.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Student Login</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Information -->
+        <div class="flex flex-col space-y-4">
+          <h3 class="text-xs font-mono font-bold text-slate-900 dark:text-white tracking-widest uppercase transition-colors duration-500">Contact Information</h3>
+          <ul class="space-y-3.5 sm:space-y-3">
+            <li class="flex items-start gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0 mt-1"></i>
+              <span>Address Placeholder, Assam, India</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0"></i>
+              <span class="font-mono">+91 XXXXX XXXXX</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0"></i>
+              <span>info@prayascoaching.com</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0 mt-1"></i>
+              <span>Mon – Sat<br><span class="font-mono">8:00 AM – 6:00 PM</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Stay Connected -->
+        <div class="flex flex-col space-y-4">
+          <h3 class="text-xs font-mono font-bold text-slate-900 dark:text-white tracking-widest uppercase transition-colors duration-500">Stay Connected</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed transition-colors duration-500">
+            Have questions? We're here to help you begin your academic journey.
+          </p>
+          <div class="pt-2">
+            <a href="contact.html" class="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 sm:py-3 rounded-xl text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-sm hover:shadow-glow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Credits Strip -->
+      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3 sm:gap-4 transition-colors duration-500 text-center sm:text-left">
+        <div>
+          © 2026 Prayas Coaching Centre. All Rights Reserved.
+        </div>
+        <div>
+          Designed & Developed with ❤️ by <a href="https://jonaid.in" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors font-semibold underline underline-offset-4">Jonaid</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating Back to Top Floating Action Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white border border-slate-200 text-slate-600 shadow-lg dark:bg-slate-900/90 backdrop-blur-xl dark:border-white/20 dark:text-slate-300 dark:shadow-glass flex items-center justify-center opacity-0 pointer-events-none hover:bg-brand-600 hover:text-white hover:border-brand-500 dark:hover:bg-brand-600 dark:hover:text-white dark:hover:border-brand-500 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500">
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+  </footer>
+
+  <!-- ========================================================
+       INTELLIGENT FRONTEND ENGINE & MICRO-INTERACTIONS
+  ======================================================== -->
+  <script>
+    // 1. Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
+    // 2. Theme Toggle Logic (Light / Dark Mode)
+    const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+    
+    function updateThemeUI() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const metaThemeColor = document.getElementById('meta-theme-color');
+      
+      if (isDark) {
+        localStorage.setItem('theme', 'dark');
+        if(metaThemeColor) metaThemeColor.setAttribute('content', '#030712');
+      } else {
+        localStorage.setItem('theme', 'light');
+        if(metaThemeColor) metaThemeColor.setAttribute('content', '#f8fafc');
+      }
+    }
+
+    themeToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        updateThemeUI();
+      });
+    });
+
+    // 3. Navigation Scroll Shadow & Blur Transition
+    const navbarHeader = document.getElementById('navbar-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbarHeader.classList.add('py-1', 'min-[375px]:py-1.5');
+        navbarHeader.classList.remove('pt-2', 'min-[375px]:pt-3');
+      } else {
+        navbarHeader.classList.remove('py-1', 'min-[375px]:py-1.5');
+        navbarHeader.classList.add('pt-2', 'min-[375px]:pt-3');
+      }
+    }, { passive: true });
+
+    // 4. Mobile Menu Interactive Toggle & Body Scroll Lock
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBackdrop = document.getElementById('mobile-backdrop');
+    let isMenuOpen = false;
+
+    function openMobileMenu() {
+      isMenuOpen = true;
+      mobileMenuButton.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      mobileBackdrop.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden'; // Prevent body scrolling
+    }
+
+    function closeMobileMenu() {
+      isMenuOpen = false;
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+      mobileBackdrop.classList.remove('opacity-100');
+      mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = ''; // Restore body scrolling
+    }
+
+    mobileMenuButton.addEventListener('click', () => {
+      if (isMenuOpen) closeMobileMenu();
+      else openMobileMenu();
+    });
+
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+    // Close mobile menu when clicking any menu link
+    mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
+    // Close mobile menu on ESC key for accessibility
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    // 5. Form Handling (Simple Validation & UX)
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnLoading = document.getElementById('btn-loading');
+    const formSuccess = document.getElementById('form-success');
+    const clearBtn = document.getElementById('clear-btn');
+    
+    // Inputs & Error spans
+    const inputs = {
+      fullName: { el: document.getElementById('full-name'), err: document.getElementById('name-error') },
+      phoneNumber: { el: document.getElementById('phone-number'), err: document.getElementById('phone-error') },
+      emailAddress: { el: document.getElementById('email-address'), err: document.getElementById('email-error') },
+      studentClass: { el: document.getElementById('student-class'), err: document.getElementById('class-error') },
+      message: { el: document.getElementById('message'), err: document.getElementById('message-error') }
+    };
+
+    function resetErrors() {
+      Object.values(inputs).forEach(({ el, err }) => {
+        err.classList.add('hidden');
+        el.classList.remove('border-rose-500', 'dark:border-rose-400', 'ring-rose-500');
+      });
+    }
+
+    function validateForm() {
+      resetErrors();
+      let isValid = true;
+
+      // Full Name
+      if (!inputs.fullName.el.value.trim()) {
+        inputs.fullName.err.classList.remove('hidden');
+        inputs.fullName.el.classList.add('border-rose-500', 'dark:border-rose-400');
+        isValid = false;
+      }
+
+      // Phone (Basic 10 digit)
+      const phoneVal = inputs.phoneNumber.el.value.trim().replace(/[^0-9]/g, '');
+      if (phoneVal.length !== 10) {
+        inputs.phoneNumber.err.classList.remove('hidden');
+        inputs.phoneNumber.el.classList.add('border-rose-500', 'dark:border-rose-400');
+        isValid = false;
+      }
+
+      // Email (Optional, but check if filled)
+      const emailVal = inputs.emailAddress.el.value.trim();
+      if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+        inputs.emailAddress.err.classList.remove('hidden');
+        inputs.emailAddress.el.classList.add('border-rose-500', 'dark:border-rose-400');
+        isValid = false;
+      }
+
+      // Class/Type
+      if (!inputs.studentClass.el.value) {
+        inputs.studentClass.err.classList.remove('hidden');
+        inputs.studentClass.el.classList.add('border-rose-500', 'dark:border-rose-400');
+        isValid = false;
+      }
+
+      // Message
+      if (!inputs.message.el.value.trim()) {
+        inputs.message.err.classList.remove('hidden');
+        inputs.message.el.classList.add('border-rose-500', 'dark:border-rose-400');
+        isValid = false;
+      }
+
+      return isValid;
+    }
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (validateForm()) {
+          // Simulate loading state
+          submitBtn.disabled = true;
+          btnText.classList.add('hidden');
+          btnLoading.classList.remove('hidden');
+          
+          setTimeout(() => {
+            // Success state
+            submitBtn.disabled = false;
+            btnText.classList.remove('hidden');
+            btnLoading.classList.add('hidden');
+            
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              formSuccess.classList.add('hidden');
+            }, 5000);
+          }, 1500);
+        }
+      });
+    }
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        contactForm.reset();
+        resetErrors();
+        formSuccess.classList.add('hidden');
+      });
+    }
+
+    // Clear error styling on input change
+    Object.values(inputs).forEach(({ el, err }) => {
+      el.addEventListener('input', () => {
+        err.classList.add('hidden');
+        el.classList.remove('border-rose-500', 'dark:border-rose-400');
+      });
+      if(el.tagName === 'SELECT') {
+         el.addEventListener('change', () => {
+            err.classList.add('hidden');
+            el.classList.remove('border-rose-500', 'dark:border-rose-400');
+         });
+      }
+    });
+
+    // 6. Back to Top Smooth Trigger
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopButton.classList.add('opacity-100');
+      } else {
+        backToTopButton.classList.remove('opacity-100');
+        backToTopButton.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }, { passive: true });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 7. Intersection Observer for Scroll Reveals
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 8. Interactive Mouse Spotlight Effect for Bento Cards
+    document.querySelectorAll('.spotlight-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  </script>
+</body>
+</html>

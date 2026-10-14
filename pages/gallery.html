@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth transition-colors duration-500">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#f8fafc" id="meta-theme-color">
+  <meta name="description" content="Explore photo gallery of Prayas Coaching Centre showcasing classrooms, teaching sessions, activities, events and student achievements.">
+  <title>Gallery - Prayas Coaching Centre</title>
+
+  <!-- Typography: Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Theme Initialization Script (Prevents FOUC) -->
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    // Default is Light unless explicitly set to Dark
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.getElementById('meta-theme-color')?.setAttribute('content', '#030712');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.getElementById('meta-theme-color')?.setAttribute('content', '#f8fafc');
+    }
+  </script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0f172a',
+            },
+            royal: {
+              50: '#f0f4ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#172554',
+              950: '#0b1329',
+            },
+            surface: {
+              base: '#030712',
+              card: 'rgba(15, 23, 42, 0.65)',
+              glass: 'rgba(255, 255, 255, 0.03)',
+              border: 'rgba(255, 255, 255, 0.08)',
+              highlight: 'rgba(255, 255, 255, 0.15)',
+            }
+          },
+          boxShadow: {
+            'glow-sm': '0 0 20px -5px rgba(59, 130, 246, 0.3)',
+            'glow-md': '0 0 35px -5px rgba(37, 99, 235, 0.4)',
+            'glow-lg': '0 0 50px -10px rgba(59, 130, 246, 0.5)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.45)',
+            'premium': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+            'inner-glow': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)',
+            'inner-glow-light': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.8)',
+          },
+          animation: {
+            'float-slow': 'floating 8s ease-in-out infinite',
+            'float-fast': 'floating 5s ease-in-out infinite',
+            'float-reverse': 'floating-reverse 7s ease-in-out infinite',
+            'pulse-subtle': 'pulseGlow 6s ease-in-out infinite',
+            'beam': 'beam 4s ease-in-out infinite',
+            'spin-slow': 'spin 20s linear infinite',
+            'radar': 'radar 3s linear infinite',
+          },
+          keyframes: {
+            floating: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-14px) rotate(0.8deg)' },
+            },
+            'floating-reverse': {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(12px) rotate(-0.8deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.25', transform: 'scale(1)' },
+              '50%': { opacity: '0.55', transform: 'scale(1.08)' },
+            },
+            beam: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' },
+            },
+            radar: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Absolute safeguard against horizontal scroll bugs */
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+    
+    /* Premium Theming CSS Variables */
+    :root {
+      --spotlight-color: rgba(59, 130, 246, 0.04);
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --spotlight-border: rgba(96, 165, 250, 0.15);
+      --scrollbar-track: #f1f5f9;
+      --scrollbar-thumb: #cbd5e1;
+      --scrollbar-thumb-hover: #94a3b8;
+    }
+    .dark {
+      --spotlight-color: rgba(59, 130, 246, 0.08);
+      --card-bg: rgba(15, 23, 42, 0.6);
+      --spotlight-border: rgba(96, 165, 250, 0.35);
+      --scrollbar-track: #030712;
+      --scrollbar-thumb: #1e293b;
+      --scrollbar-thumb-hover: #3b82f6;
+    }
+
+    /* Global Transition for Smooth Theme Switching */
+    body {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    /* Noise texture overlay for luxury tactile feel */
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    /* Hardware accelerated smooth reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px) scale(0.98);
+      filter: blur(4px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity, filter;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    /* Staggered transition children */
+    .reveal-delay-1 { transition-delay: 100ms; }
+    .reveal-delay-2 { transition-delay: 200ms; }
+    .reveal-delay-3 { transition-delay: 300ms; }
+    .reveal-delay-4 { transition-delay: 400ms; }
+
+    /* Interactive Spotlight Card effect */
+    .spotlight-card {
+      position: relative;
+      background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--spotlight-color), transparent 45%),
+                  var(--card-bg);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .spotlight-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--spotlight-border), transparent 40%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      opacity: 0;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+
+    /* Gradient Border Shimmer Button */
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.22) 50%,
+        transparent 65%
+      );
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+    .shimmer-btn:hover::after {
+      transform: translateX(100%);
+    }
+
+    /* Gallery item transition */
+    .gallery-item {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-item.hide {
+      display: none;
+    }
+
+    /* Mobile thumb-friendly tap target optimizations */
+    @media (max-width: 640px) {
+      .tap-target {
+        min-height: 48px;
+        min-width: 48px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-surface-base dark:text-slate-100 font-sans selection:bg-brand-600 selection:text-white antialiased overflow-x-hidden relative">
+
+  <!-- Grain Texture Layer -->
+  <div class="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 dark:opacity-60 transition-opacity duration-500" aria-hidden="true"></div>
+
+  <!-- Global Dynamic Mesh Lighting -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-brand-500/10 via-indigo-500/5 to-transparent dark:from-brand-600/15 dark:via-indigo-600/10 rounded-full blur-[140px] animate-pulse-subtle"></div>
+    <div class="absolute top-[40%] -left-64 w-[500px] h-[500px] bg-blue-500/5 dark:bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+    <div class="absolute top-[70%] -right-64 w-[550px] h-[550px] bg-indigo-500/5 dark:bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none"></div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="relative z-50 bg-white/90 border-b border-slate-200 backdrop-blur-md dark:bg-slate-950/90 dark:border-white/[0.06] px-4 py-2 text-center text-xs sm:text-[13px] font-medium text-slate-600 dark:text-slate-300 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold bg-brand-50 text-brand-600 border border-brand-200 dark:bg-brand-500/15 dark:text-blue-400 dark:border-brand-500/30 uppercase tracking-wider transition-colors duration-500">Admissions 2026</span>
+      <span>Limited seats open for Classes VIII, IX &amp; X (ASSEB Division-I).</span>
+      <a href="contact.html" class="hidden sm:inline-flex items-center text-brand-600 hover:text-brand-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold underline underline-offset-4 ml-1 transition-colors">
+        Enroll Today &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar (Exact Homepage Header) -->
+  <header id="navbar-header" class="sticky top-0 z-50 transition-all duration-300 pt-2 min-[375px]:pt-3">
+    <div class="max-w-7xl mx-auto px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
+      <nav class="relative rounded-2xl bg-white/80 border border-slate-200/60 shadow-sm backdrop-blur-2xl dark:bg-slate-950/80 dark:border-white/[0.08] dark:shadow-glass px-2.5 min-[375px]:px-4 sm:px-6 h-[64px] sm:h-[72px] flex items-center justify-between transition-all duration-300 w-full" aria-label="Main Navigation">
+        
+        <!-- Logo -->
+        <a href="/frontend/index.html" class="flex items-center gap-2 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-xl p-1 flex-1 min-w-0 shrink">
+          <div class="relative flex items-center justify-center shrink-0">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-sky-400 p-[1px] shadow-glow-sm group-hover:shadow-glow-md transition-all duration-300">
+              <div class="w-full h-full bg-white dark:bg-slate-950 rounded-[10px] sm:rounded-[11px] flex items-center justify-center text-slate-900 dark:text-white font-extrabold text-base sm:text-xl font-mono tracking-wider group-hover:scale-105 transition-transform duration-300">
+                P
+              </div>
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-emerald-500 border-2 border-white dark:border-slate-950 rounded-full transition-colors duration-500" title="Active Sessions"></span>
+          </div>
+          <div class="flex flex-col text-left min-w-0 flex-1 shrink">
+            <span class="font-extrabold text-slate-900 dark:text-white text-[13px] min-[375px]:text-sm sm:text-base tracking-tight truncate group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+              Prayas Coaching Centre
+            </span>
+            <span class="text-[9px] min-[375px]:text-[10px] sm:text-[11px] font-semibold text-slate-500 dark:text-slate-400 tracking-widest uppercase font-mono truncate transition-colors duration-500">
+              Learn • Grow • Succeed
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <div class="hidden lg:flex items-center gap-1 bg-slate-100/50 dark:bg-white/[0.02] p-1.5 rounded-xl border border-slate-200/50 dark:border-white/[0.05] transition-colors duration-500">
+          <a href="/frontend/index.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Home</a>
+          <a href="about.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">About</a>
+          <a href="courses.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Courses</a>
+          <a href="teachers.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Teachers</a>
+          <a href="gallery.html" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-white text-slate-900 shadow-sm dark:bg-white/[0.08] dark:text-white dark:shadow-inner-glow transition-all duration-200" aria-current="page">Gallery</a>
+          <a href="results.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Results</a>
+          <a href="notices.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Notices</a>
+          <a href="contact.html" class="px-3 py-1.5 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-white/60 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-all duration-200">Contact</a>
+        </div>
+
+        <!-- Desktop Actions: Theme Toggle & Login CTA -->
+        <div class="hidden lg:flex items-center gap-3 shrink-0 ml-3">
+          <!-- Theme Toggle (Desktop) -->
+          <button type="button" class="theme-toggle-btn tap-target relative inline-flex h-8 w-14 shrink-0 cursor-pointer items-center rounded-full bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300/60 dark:border-white/10 shadow-inner backdrop-blur-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950 transition-colors duration-500" aria-label="Toggle theme">
+            <span class="sr-only">Toggle theme</span>
+            <span class="absolute left-1 flex h-6 w-6 transform items-center justify-center rounded-full bg-white dark:bg-slate-950 shadow-[0_2px_5px_rgba(0,0,0,0.15)] dark:shadow-[0_2px_5px_rgba(0,0,0,0.4)] border border-slate-100 dark:border-white/5 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] translate-x-0 dark:translate-x-6">
+              <i data-lucide="sun" class="w-3.5 h-3.5 text-amber-500 transition-all duration-500 opacity-100 scale-100 dark:opacity-0 dark:scale-50 absolute"></i>
+              <i data-lucide="moon" class="w-3 h-3 text-blue-400 transition-all duration-500 opacity-0 scale-50 dark:opacity-100 dark:scale-100 absolute"></i>
+            </span>
+          </button>
+          
+          <a href="login.html" class="shimmer-btn inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-600 via-royal-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-glow-sm hover:shadow-glow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 border border-white/25 focus:outline-none focus:ring-2 focus:ring-brand-400">
+            <i data-lucide="user" class="w-4 h-4 mr-2"></i>
+            <span>Student Login</span>
+          </a>
+        </div>
+
+        <!-- Mobile Actions: Theme, Login & Hamburger -->
+        <div class="flex items-center gap-1.5 min-[375px]:gap-2 lg:hidden shrink-0 ml-1.5">
+          <!-- Theme Toggle (Mobile - Premium Pill) -->
+          <button type="button" class="theme-toggle-btn tap-target relative inline-flex h-7 w-12 shrink-0 cursor-pointer items-center rounded-full bg-slate-200/80 dark:bg-slate-800/80 border border-slate-300/60 dark:border-white/10 shadow-inner backdrop-blur-md focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors duration-500" aria-label="Toggle theme">
+            <span class="sr-only">Toggle theme</span>
+            <span class="absolute left-1 flex h-5 w-5 transform items-center justify-center rounded-full bg-white dark:bg-slate-950 shadow-[0_2px_5px_rgba(0,0,0,0.15)] dark:shadow-[0_2px_5px_rgba(0,0,0,0.4)] border border-slate-100 dark:border-white/5 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] translate-x-0 dark:translate-x-5">
+              <i data-lucide="sun" class="w-3 h-3 text-amber-500 transition-all duration-500 opacity-100 scale-100 dark:opacity-0 dark:scale-50 absolute"></i>
+              <i data-lucide="moon" class="w-3 h-3 text-blue-400 transition-all duration-500 opacity-0 scale-50 dark:opacity-100 dark:scale-100 absolute"></i>
+            </span>
+          </button>
+
+          <a href="login.html" class="px-2 py-1.5 min-[375px]:px-2.5 min-[375px]:py-2 rounded-xl text-xs font-bold text-white bg-brand-600 hover:bg-brand-500 transition-colors shadow-glow-sm flex items-center justify-center min-h-[44px] min-w-[44px] shrink-0">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span class="hidden min-[430px]:inline ml-1.5">Login</span>
+          </a>
+          <button id="mobile-menu-button" type="button" class="tap-target p-1.5 min-[375px]:p-2 rounded-xl text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-white/[0.08] dark:hover:text-white border border-transparent focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all duration-200 flex items-center justify-center shrink-0 min-h-[44px] min-w-[44px]" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+            <span class="sr-only">Open main menu</span>
+            <i data-lucide="menu" id="menu-icon" class="w-5 h-5 min-[375px]:w-6 min-[375px]:h-6"></i>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Mobile Menu Backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-slate-900/40 backdrop-blur-md dark:bg-slate-950/80 dark:backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden z-40" aria-hidden="true"></div>
+
+    <!-- Slide-In Mobile Drawer -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full max-w-[320px] sm:max-w-sm bg-white/95 backdrop-blur-2xl border-l border-slate-200 shadow-2xl dark:bg-slate-950/98 dark:border-white/10 transform translate-x-full transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] lg:hidden z-50 flex flex-col overflow-y-auto" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+      
+      <!-- Mobile Menu Header -->
+      <div class="px-5 py-5 sm:p-6 flex items-center justify-between border-b border-slate-100 dark:border-white/[0.08] transition-colors duration-500">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-sky-400 p-[1px] shadow-glow-sm shrink-0">
+            <div class="w-full h-full bg-white dark:bg-slate-950 rounded-[11px] flex items-center justify-center text-slate-900 dark:text-white font-extrabold text-base font-mono transition-colors duration-500">
+              P
+            </div>
+          </div>
+          <div class="min-w-0 shrink">
+            <div class="font-extrabold text-slate-900 dark:text-white text-sm tracking-tight truncate transition-colors duration-500">Prayas Coaching Centre</div>
+            <div class="text-[10px] font-semibold text-slate-500 dark:text-slate-400 tracking-wider uppercase font-mono truncate transition-colors duration-500">Navigation Menu</div>
+          </div>
+        </div>
+        <button id="mobile-menu-close" type="button" class="tap-target p-2 rounded-xl text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-white dark:hover:bg-white/[0.08] border border-transparent focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close menu">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Links List -->
+      <div class="px-5 py-6 space-y-2 flex-1">
+        <a href="/frontend/index.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="home" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="about.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="info" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> About</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="courses.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="book-open" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Courses</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="teachers.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="users" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Teachers</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="gallery.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-semibold text-brand-600 bg-brand-50 border border-brand-100 dark:text-blue-400 dark:bg-brand-500/10 dark:border-brand-500/20 min-h-[56px] transition-colors duration-500" aria-current="page">
+          <span class="flex items-center gap-3.5"><i data-lucide="image" class="w-[18px] h-[18px]"></i> Gallery</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="results.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="award" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Results</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="notices.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="bell" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Notices</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="contact.html" class="mobile-nav-link group flex items-center justify-between px-4 py-4 rounded-xl text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.04] transition-colors min-h-[56px]">
+          <span class="flex items-center gap-3.5"><i data-lucide="mail" class="w-[18px] h-[18px] text-slate-400 dark:text-slate-500"></i> Contact</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 dark:text-slate-600 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Drawer Footer CTA ("Student Login") -->
+      <div class="px-5 py-6 border-t border-slate-100 bg-slate-50 dark:border-white/[0.08] dark:bg-slate-950/50 transition-colors duration-500">
+        <a href="login.html" class="mobile-nav-link group flex items-center justify-center w-full px-5 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 shadow-glow-sm min-h-[56px] transition-transform hover:-translate-y-0.5 active:translate-y-0">
+          <i data-lucide="user" class="w-5 h-5 mr-2"></i>
+          <span>Student Login</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================
+       1. HERO SECTION
+  ======================================================== -->
+  <section class="relative min-h-[calc(80vh-80px)] flex items-center justify-center overflow-hidden pt-12 pb-24 sm:pt-20 sm:pb-32 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1.2px,transparent_1.2px)] dark:bg-[radial-gradient(#3b82f6_1.2px,transparent_1.2px)] [background-size:36px_36px] opacity-[0.25] dark:opacity-[0.14] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-50/80 to-slate-50 dark:via-slate-950/60 dark:to-slate-950 pointer-events-none transition-colors duration-500"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
+      
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/60 border border-slate-200 text-brand-600 dark:bg-slate-900/80 dark:border-white/10 dark:text-blue-400 text-[11px] min-[375px]:text-xs sm:text-sm font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-xl mb-6 reveal active transition-colors duration-500">
+        <i data-lucide="camera" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 dark:text-amber-400"></i>
+        <span class="text-slate-700 dark:text-slate-200">Life at Prayas Coaching Centre</span>
+      </div>
+
+      <h1 class="text-3xl min-[375px]:text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12] sm:leading-[1.1] text-balance reveal active reveal-delay-1 transition-colors duration-500">
+        Capturing Every Step of <br class="hidden sm:inline">
+        <span class="bg-gradient-to-r from-brand-600 via-indigo-600 to-sky-500 dark:from-blue-400 dark:via-indigo-300 dark:to-brand-500 bg-clip-text text-transparent">Learning</span>
+      </h1>
+
+      <p class="text-sm min-[375px]:text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto mt-5 sm:mt-6 font-normal reveal active reveal-delay-2 transition-colors duration-500">
+        Explore memorable moments from classrooms, activities, celebrations and the everyday learning journey at Prayas Coaching Centre.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-md mx-auto sm:max-w-none mt-8 sm:mt-10 reveal active reveal-delay-3">
+        <a href="courses.html" class="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-600 via-royal-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-glow-md hover:shadow-glow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-400 group">
+          <span>Explore Courses</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="contact.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm dark:text-slate-200 dark:bg-slate-900/80 dark:hover:bg-slate-800 dark:hover:text-white backdrop-blur-xl dark:border-white/10 dark:shadow-glass hover:border-brand-500/30 dark:hover:border-brand-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-950">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       2. GALLERY CATEGORIES (FILTER BUTTONS)
+  ======================================================== -->
+  <section class="relative pt-8 pb-10 sm:pb-12 bg-slate-50 dark:bg-surface-base sticky top-[64px] sm:top-[80px] z-40 backdrop-blur-2xl bg-white/85 dark:bg-slate-950/85 border-b border-slate-200 dark:border-white/[0.08] transition-colors duration-500 w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-start md:justify-center gap-2 sm:gap-3 overflow-x-auto pb-3 sm:pb-2 scrollbar-none w-full" role="tablist" aria-label="Gallery Categories">
+        <button role="tab" aria-selected="true" data-filter="all" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-brand-600 shadow-glow-sm transition-all duration-200 shrink-0">
+          All
+        </button>
+        <button role="tab" aria-selected="false" data-filter="classrooms" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0">
+          Classrooms
+        </button>
+        <button role="tab" aria-selected="false" data-filter="teaching-sessions" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0">
+          Teaching Sessions
+        </button>
+        <button role="tab" aria-selected="false" data-filter="activities" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0">
+          Activities
+        </button>
+        <button role="tab" aria-selected="false" data-filter="events" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0">
+          Events
+        </button>
+        <button role="tab" aria-selected="false" data-filter="celebrations" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0">
+          Celebrations
+        </button>
+        <button role="tab" aria-selected="false" data-filter="achievements" class="filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0">
+          Student Achievements
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. PREMIUM GALLERY GRID (MASONRY / RESPONSIVE)
+  ======================================================== -->
+  <section class="relative py-20 sm:py-32 overflow-hidden bg-slate-50/70 dark:bg-surface-base transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 w-full">
+        
+        <!-- Item 1 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-1 transition-all duration-500 w-full" data-category="teaching-sessions" data-title="Interactive Mathematics Class" data-image="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Interactive Mathematics Class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-brand-600 dark:text-blue-400 transition-colors duration-500">Teaching Sessions</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Interactive Mathematics Class</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Solving equations with personalized attention</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-2 transition-all duration-500 w-full" data-category="teaching-sessions" data-title="Science Concept Session" data-image="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Science Concept Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-brand-600 dark:text-blue-400 transition-colors duration-500">Teaching Sessions</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Science Concept Session</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Demonstrating practical scientific principles</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-3 transition-all duration-500 w-full" data-category="classrooms" data-title="English Grammar Workshop" data-image="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="English Grammar Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-emerald-600 dark:text-emerald-400 transition-colors duration-500">Classrooms</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">English Grammar Workshop</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Mastering syntax and language fluency</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-1 transition-all duration-500 w-full" data-category="classrooms" data-title="Classroom Learning" data-image="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Classroom Learning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-emerald-600 dark:text-emerald-400 transition-colors duration-500">Classrooms</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Classroom Learning</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Engaged students in a focused study environment</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-2 transition-all duration-500 w-full" data-category="teaching-sessions" data-title="Weekly Test Session" data-image="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Weekly Test Session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-brand-600 dark:text-blue-400 transition-colors duration-500">Teaching Sessions</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Weekly Test Session</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Building exam readiness and precision</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-3 transition-all duration-500 w-full" data-category="activities" data-title="Student Activity" data-image="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Student Activity" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-amber-600 dark:text-amber-400 transition-colors duration-500">Activities</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Student Activity</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Collaborative group discussions and teamwork</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-1 transition-all duration-500 w-full" data-category="celebrations" data-title="Prize Distribution" data-image="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Prize Distribution" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-purple-600 dark:text-purple-400 transition-colors duration-500">Celebrations</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Prize Distribution</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Honoring academic excellence and top performers</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-2 transition-all duration-500 w-full" data-category="events" data-title="Motivational Seminar" data-image="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Motivational Seminar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-sky-600 dark:text-sky-400 transition-colors duration-500">Events</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Motivational Seminar</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Inspiring students for board examination success</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-3 transition-all duration-500 w-full" data-category="achievements" data-title="Foundation Batch" data-image="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Foundation Batch" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-emerald-600 dark:text-emerald-400 transition-colors duration-500">Student Achievements</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Foundation Batch</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Class VIII & IX dedicated learners</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="gallery-item spotlight-card rounded-3xl overflow-hidden border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group cursor-pointer reveal reveal-delay-1 transition-all duration-500 w-full" data-category="activities" data-title="Summer Programme" data-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-200 dark:bg-slate-900 transition-colors duration-500 w-full">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" loading="lazy" alt="Summer Programme" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 dark:opacity-80 group-hover:opacity-90 transition-opacity"></div>
+            <div class="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span class="px-2.5 py-1 sm:px-3 sm:py-1 rounded-full bg-white/90 dark:bg-slate-950/80 backdrop-blur-md border border-slate-200/50 dark:border-white/10 text-[10px] sm:text-xs font-mono text-amber-600 dark:text-amber-400 transition-colors duration-500">Activities</span>
+            </div>
+            <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex items-end justify-between gap-3">
+              <div class="min-w-0">
+                <h3 class="text-base sm:text-lg font-bold text-white tracking-tight truncate sm:whitespace-normal transition-colors duration-500">Summer Programme</h3>
+                <p class="text-[11px] sm:text-xs text-slate-300 dark:text-slate-400 mt-0.5 truncate sm:whitespace-normal transition-colors duration-500">Vacation concept strengthening classes</p>
+              </div>
+              <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/20 flex items-center justify-center text-white group-hover:bg-brand-600 transition-colors shrink-0">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. LIGHTBOX MODAL
+  ======================================================== -->
+  <div id="lightbox" class="fixed inset-0 z-[70] bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+    
+    <button id="lightbox-close" aria-label="Close Lightbox" class="absolute top-4 sm:top-6 right-4 sm:right-6 z-[80] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 border border-slate-300 dark:border-white/20 text-slate-700 dark:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500">
+      <i data-lucide="x" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+    </button>
+
+    <button id="lightbox-prev" aria-label="Previous Image" class="absolute left-2 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 z-[80] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 border border-slate-300 dark:border-white/20 text-slate-700 dark:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 hidden sm:flex">
+      <i data-lucide="chevron-left" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+    </button>
+
+    <button id="lightbox-next" aria-label="Next Image" class="absolute right-2 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 z-[80] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 border border-slate-300 dark:border-white/20 text-slate-700 dark:text-white flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 hidden sm:flex">
+      <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+    </button>
+
+    <div class="max-w-5xl max-h-[90vh] sm:max-h-[85vh] p-4 flex flex-col items-center w-full">
+      <img id="lightbox-img" src="" alt="" class="max-h-[70vh] sm:max-h-[75vh] max-w-full object-contain rounded-2xl shadow-premium dark:shadow-2xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-900 transition-opacity duration-300 w-auto">
+      <div id="lightbox-caption" class="mt-4 text-slate-900 dark:text-white text-sm sm:text-base lg:text-lg font-bold tracking-tight text-center px-4 transition-colors duration-500"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       5. LIFE AT PRAYAS (STORYTELLING)
+  ======================================================== -->
+  <section class="relative py-20 sm:py-32 overflow-hidden bg-white dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-brand-500/5 dark:bg-brand-600/10 rounded-full blur-[160px] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
+      
+      <div class="rounded-3xl bg-white/80 border border-slate-200/80 shadow-2xl shadow-rose-500/5 dark:bg-slate-900/85 backdrop-blur-2xl dark:border-white/[0.12] dark:shadow-glass p-6 sm:p-14 reveal space-y-5 sm:space-y-6 transition-colors duration-500">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-brand-600 dark:bg-slate-950/80 dark:border-white/10 dark:text-blue-400 text-[11px] font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-md transition-colors duration-500">
+          <i data-lucide="heart" class="w-4 h-4 text-rose-500 fill-rose-500 dark:text-rose-400 dark:fill-rose-400"></i>
+          <span class="tracking-widest uppercase font-mono">OUR CULTURE</span>
+        </div>
+
+        <h2 class="text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-2xl mx-auto leading-[1.2] sm:leading-[1.12] transition-colors duration-500">
+          More Than Just A Coaching Centre
+        </h2>
+
+        <div class="text-sm min-[375px]:text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto space-y-3 sm:space-y-4 leading-relaxed font-normal transition-colors duration-500">
+          <p>
+            At Prayas Coaching Centre, learning is not limited to books.
+          </p>
+          <p>
+            Every classroom interaction, discussion, activity and achievement contributes to building confident, disciplined and responsible students.
+          </p>
+          <p class="text-slate-900 dark:text-white font-semibold transition-colors duration-500">
+            We believe education should inspire curiosity, confidence and lifelong learning.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. STUDENT EXPERIENCE
+  ======================================================== -->
+  <section class="relative py-20 sm:py-32 overflow-hidden bg-slate-50/70 dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-brand-600 dark:bg-slate-900/90 dark:border-white/10 dark:text-blue-400 text-[11px] font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-md mb-4 transition-colors duration-500">
+          <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500 dark:text-amber-400 dark:fill-amber-400"></i>
+          <span class="tracking-widest uppercase font-mono">LEARNING ATMOSPHERE</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white transition-colors duration-500">
+          Student Experience
+        </h2>
+        <p class="text-sm min-[375px]:text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-4 transition-colors duration-500">
+          Core elements that define daily life at our centre.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 min-[430px]:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 w-full">
+        
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-1 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="smile" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Friendly Environment</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Spaces designed to make students feel relaxed and eager to learn.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-2 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="zap" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Interactive Classes</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Two-way discussions ensuring active student participation.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-3 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="layers" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Concept-Based</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Focusing on deep clarity instead of rote memorization.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-4 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="user-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Individual Attention</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Small batch sizes ensuring no student is left behind.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-1 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="home" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Healthy Atmosphere</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Positive peer interaction and mutual encouragement.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-2 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="award" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Confidence Building</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Test practices to overcome stage and exam fear.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-3 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="calendar" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Weekly Activities</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Engaging events that foster overall development.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-6 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass group reveal reveal-delay-4 flex flex-col items-start min-[430px]:items-center min-[430px]:text-center">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-brand-50 text-brand-600 dark:bg-brand-500/10 dark:text-blue-400 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all shadow-inner shrink-0">
+            <i data-lucide="users" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+          </div>
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white tracking-tight transition-colors duration-500 truncate sm:whitespace-normal">Supportive Teachers</h3>
+            <p class="text-[11px] sm:text-sm text-slate-500 dark:text-slate-400 mt-1.5 sm:mt-2 leading-relaxed transition-colors duration-500">Dedicated mentors ready to assist students anytime.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. STATISTICS (ANIMATED COUNTERS)
+  ======================================================== -->
+  <section class="relative py-20 sm:py-32 overflow-hidden bg-white dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 w-full">
+        
+        <div class="spotlight-card p-5 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass text-center reveal reveal-delay-1 min-w-0 transition-colors duration-500">
+          <div class="text-3xl min-[375px]:text-4xl sm:text-6xl font-extrabold font-mono text-slate-900 dark:text-white tracking-tight transition-colors duration-500">
+            <span class="counter" data-target="50">0</span>+
+          </div>
+          <div class="text-[10px] min-[375px]:text-[11px] sm:text-sm font-semibold text-brand-600 dark:text-blue-400 mt-1.5 sm:mt-2 uppercase tracking-wider transition-colors duration-500 truncate sm:whitespace-normal">Gallery Photos</div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass text-center reveal reveal-delay-2 min-w-0 transition-colors duration-500">
+          <div class="text-3xl min-[375px]:text-4xl sm:text-6xl font-extrabold font-mono text-slate-900 dark:text-white tracking-tight transition-colors duration-500">
+            <span class="counter" data-target="500">0</span>+
+          </div>
+          <div class="text-[10px] min-[375px]:text-[11px] sm:text-sm font-semibold text-brand-600 dark:text-blue-400 mt-1.5 sm:mt-2 uppercase tracking-wider transition-colors duration-500 truncate sm:whitespace-normal">Learning Sessions</div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass text-center reveal reveal-delay-3 min-w-0 transition-colors duration-500">
+          <div class="text-3xl min-[375px]:text-4xl sm:text-6xl font-extrabold font-mono text-slate-900 dark:text-white tracking-tight transition-colors duration-500">
+            <span class="counter" data-target="200">0</span>+
+          </div>
+          <div class="text-[10px] min-[375px]:text-[11px] sm:text-sm font-semibold text-brand-600 dark:text-blue-400 mt-1.5 sm:mt-2 uppercase tracking-wider transition-colors duration-500 truncate sm:whitespace-normal">Happy Students</div>
+        </div>
+
+        <div class="spotlight-card p-5 sm:p-8 rounded-3xl border border-slate-200/60 dark:border-white/[0.08] shadow-premium dark:shadow-glass text-center reveal reveal-delay-4 min-w-0 transition-colors duration-500">
+          <div class="text-3xl min-[375px]:text-4xl sm:text-6xl font-extrabold font-mono text-slate-900 dark:text-white tracking-tight transition-colors duration-500">
+            <span class="counter" data-target="20">0</span>+
+          </div>
+          <div class="text-[10px] min-[375px]:text-[11px] sm:text-sm font-semibold text-brand-600 dark:text-blue-400 mt-1.5 sm:mt-2 uppercase tracking-wider transition-colors duration-500 truncate sm:whitespace-normal">Events Conducted</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       8. SHARE YOUR MOMENTS (CTA SECTION)
+  ======================================================== -->
+  <section id="admissions-cta" class="relative py-20 sm:py-32 overflow-hidden bg-slate-50/70 dark:bg-surface-base border-t border-slate-100 dark:border-white/[0.06] transition-colors duration-500 w-full">
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-brand-500/5 dark:bg-brand-600/15 rounded-full blur-[160px] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
+      
+      <!-- Central Bento Frame -->
+      <div class="max-w-4xl mx-auto rounded-3xl bg-white/80 border border-slate-200/80 shadow-2xl shadow-blue-500/5 dark:bg-slate-900/80 backdrop-blur-2xl dark:border-white/[0.12] dark:shadow-glass p-6 sm:p-14 relative overflow-hidden flex flex-col items-center reveal transition-colors duration-500">
+        
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.05),transparent_70%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.15),transparent_70%)] pointer-events-none transition-colors duration-500"></div>
+
+        <div class="relative z-10 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-brand-600 dark:bg-slate-950/80 dark:border-white/10 dark:text-blue-400 text-[11px] font-semibold tracking-wide shadow-sm dark:shadow-glass backdrop-blur-md mb-5 sm:mb-6 transition-colors duration-500">
+          <i data-lucide="sparkles" class="w-4 h-4 text-amber-500 dark:text-amber-400"></i>
+          <span class="tracking-widest uppercase font-mono">YOUR SUCCESS STORY</span>
+        </div>
+
+        <h2 class="relative z-10 text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white max-w-2xl leading-[1.12] transition-colors duration-500">
+          Every Achievement Begins With A Single Step
+        </h2>
+
+        <p class="relative z-10 text-sm min-[375px]:text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-xl mt-4 leading-relaxed font-normal transition-colors duration-500">
+          Join Prayas Coaching Centre and become part of a learning community where every moment contributes to success.
+        </p>
+
+        <div class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md mt-8 sm:mt-9">
+          <a href="contact.html" class="w-full sm:w-auto shimmer-btn inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-glow-md hover:shadow-glow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-400 group">
+            <span>Apply for Admission</span>
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+          <a href="courses.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl text-base font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 shadow-sm dark:text-slate-200 dark:bg-slate-950/80 dark:hover:bg-slate-800 dark:hover:text-white backdrop-blur-xl dark:border-white/10 dark:shadow-glass hover:border-brand-500/30 dark:hover:border-brand-500/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-950">
+            Explore Courses
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER SECTION (Exact Homepage Footer)
+  ======================================================== -->
+  <footer id="footer" class="relative pt-16 sm:pt-20 pb-10 sm:pb-12 overflow-hidden bg-slate-100 text-slate-600 border-t border-slate-200 dark:bg-slate-950 dark:text-slate-300 dark:border-white/[0.08] transition-colors duration-500 w-full">
+    
+    <div class="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.1] dark:opacity-[0.05] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-brand-500/5 dark:bg-brand-600/10 rounded-full blur-[160px] pointer-events-none transition-colors duration-500" aria-hidden="true"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- 4-Column Responsive Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-8 pb-12 sm:pb-16 border-b border-slate-200 dark:border-white/[0.08] transition-colors duration-500">
+        
+        <!-- Column 1: Brand & Socials -->
+        <div class="flex flex-col items-start space-y-4 sm:space-y-5">
+          <a href="/frontend/index.html" class="flex items-center gap-3.5 group focus:outline-none">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-600 to-sky-400 p-[1px] shadow-glow-sm group-hover:scale-105 transition-transform duration-300 shrink-0">
+              <div class="w-full h-full bg-white dark:bg-slate-950 rounded-[11px] flex items-center justify-center text-slate-900 dark:text-white font-extrabold text-lg font-mono transition-colors duration-500">
+                P
+              </div>
+            </div>
+            <span class="font-extrabold text-slate-900 dark:text-white text-lg tracking-tight group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors duration-500 truncate">
+              Prayas Coaching Centre
+            </span>
+          </a>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-normal transition-colors duration-500">
+            Empowering Assamese Medium students from Classes VIII to X through quality education, expert guidance, and a commitment to academic excellence.
+          </p>
+          
+          <!-- Social Media Icons (Touch friendly) -->
+          <div class="flex items-center gap-2.5 pt-2">
+            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-600 hover:border-brand-500 dark:bg-white/[0.04] dark:border-white/[0.08] dark:text-slate-300 shadow-sm transition-all duration-200 shrink-0">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="flex flex-col space-y-4">
+          <h3 class="text-xs font-mono font-bold text-slate-900 dark:text-white tracking-widest uppercase transition-colors duration-500">Quick Links</h3>
+          <ul class="space-y-3 sm:space-y-2.5">
+            <li>
+              <a href="/frontend/index.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Home</a>
+            </li>
+            <li>
+              <a href="about.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">About</a>
+            </li>
+            <li>
+              <a href="courses.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Courses</a>
+            </li>
+            <li>
+              <a href="teachers.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Teachers</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Gallery</a>
+            </li>
+            <li>
+              <a href="results.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Results</a>
+            </li>
+            <li>
+              <a href="notices.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Notices</a>
+            </li>
+            <li>
+              <a href="login.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Student Login</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-sm text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors inline-block hover:translate-x-1 duration-200">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Information -->
+        <div class="flex flex-col space-y-4">
+          <h3 class="text-xs font-mono font-bold text-slate-900 dark:text-white tracking-widest uppercase transition-colors duration-500">Contact Information</h3>
+          <ul class="space-y-3.5 sm:space-y-3">
+            <li class="flex items-start gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0 mt-1"></i>
+              <span>Address Placeholder, Assam, India</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0"></i>
+              <span class="font-mono">+91 XXXXX XXXXX</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0"></i>
+              <span>info@prayascoaching.com</span>
+            </li>
+            <li class="flex items-start gap-3 text-sm text-slate-500 dark:text-slate-400 transition-colors duration-500">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0 mt-1"></i>
+              <span>Mon – Sat<br><span class="font-mono">8:00 AM – 6:00 PM</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Stay Connected -->
+        <div class="flex flex-col space-y-4">
+          <h3 class="text-xs font-mono font-bold text-slate-900 dark:text-white tracking-widest uppercase transition-colors duration-500">Stay Connected</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed transition-colors duration-500">
+            Have questions? We're here to help you begin your academic journey.
+          </p>
+          <div class="pt-2">
+            <a href="contact.html" class="shimmer-btn w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 sm:py-3 rounded-xl text-sm font-semibold text-white bg-brand-600 hover:bg-brand-500 shadow-glow-sm hover:shadow-glow-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Credits Strip -->
+      <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3 sm:gap-4 transition-colors duration-500 text-center sm:text-left">
+        <div>
+          © 2026 Prayas Coaching Centre. All Rights Reserved.
+        </div>
+        <div>
+          Designed & Developed with ❤️ by <a href="https://jonaid.in" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-brand-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors font-semibold underline underline-offset-4">Jonaid</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating Back to Top Floating Action Button -->
+    <button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white border border-slate-200 text-slate-600 shadow-lg dark:bg-slate-900/90 backdrop-blur-xl dark:border-white/20 dark:text-slate-300 dark:shadow-glass flex items-center justify-center opacity-0 pointer-events-none hover:bg-brand-600 hover:text-white hover:border-brand-500 dark:hover:bg-brand-600 dark:hover:text-white dark:hover:border-brand-500 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-500">
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+  </footer>
+
+  <!-- ========================================================
+       INTELLIGENT FRONTEND ENGINE & MICRO-INTERACTIONS
+  ======================================================== -->
+  <script>
+    // 1. Initialize Lucide Icons
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+
+    // 2. Theme Toggle Logic (Light / Dark Mode)
+    const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+    
+    function updateThemeUI() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const metaThemeColor = document.getElementById('meta-theme-color');
+      
+      if (isDark) {
+        localStorage.setItem('theme', 'dark');
+        if(metaThemeColor) metaThemeColor.setAttribute('content', '#030712');
+      } else {
+        localStorage.setItem('theme', 'light');
+        if(metaThemeColor) metaThemeColor.setAttribute('content', '#f8fafc');
+      }
+    }
+
+    themeToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        updateThemeUI();
+      });
+    });
+
+    // 3. Navigation Scroll Shadow & Blur Transition
+    const navbarHeader = document.getElementById('navbar-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbarHeader.classList.add('py-1', 'min-[375px]:py-1.5');
+        navbarHeader.classList.remove('pt-2', 'min-[375px]:pt-3');
+      } else {
+        navbarHeader.classList.remove('py-1', 'min-[375px]:py-1.5');
+        navbarHeader.classList.add('pt-2', 'min-[375px]:pt-3');
+      }
+    }, { passive: true });
+
+    // 4. Mobile Menu Interactive Toggle & Body Scroll Lock
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBackdrop = document.getElementById('mobile-backdrop');
+    let isMenuOpen = false;
+
+    function openMobileMenu() {
+      isMenuOpen = true;
+      mobileMenuButton.setAttribute('aria-expanded', 'true');
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      mobileBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      mobileBackdrop.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden'; // Prevent body scrolling
+    }
+
+    function closeMobileMenu() {
+      isMenuOpen = false;
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+      mobileBackdrop.classList.remove('opacity-100');
+      mobileBackdrop.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = ''; // Restore body scrolling
+    }
+
+    mobileMenuButton.addEventListener('click', () => {
+      if (isMenuOpen) closeMobileMenu();
+      else openMobileMenu();
+    });
+
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+    // Close mobile menu when clicking any menu link
+    mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
+    // Close mobile menu on ESC key for accessibility
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        closeMobileMenu();
+      }
+    });
+
+    // 5. Gallery Category Filtering Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.setAttribute('aria-selected', 'false');
+          // Reset all buttons to unselected state correctly matching the HTML
+          b.className = 'filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/[0.06] dark:border-white/[0.08] transition-all duration-200 shrink-0';
+        });
+        
+        btn.setAttribute('aria-selected', 'true');
+        // Set clicked button to selected state
+        btn.className = 'filter-btn px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-brand-600 shadow-glow-sm transition-all duration-200 shrink-0';
+
+        const filter = btn.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.classList.remove('hide');
+            // Small delay to allow display:block to apply before animating opacity
+            requestAnimationFrame(() => {
+                setTimeout(() => item.style.opacity = '1', 10);
+            });
+          } else {
+            item.style.opacity = '0';
+            setTimeout(() => item.classList.add('hide'), 400); // match transition duration
+          }
+        });
+      });
+    });
+
+    // 6. Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+
+    let currentIndex = 0;
+    // Helper to get only currently visible items
+    const activeGalleryItems = () => Array.from(galleryItems).filter(item => !item.classList.contains('hide'));
+
+    function openLightbox(index) {
+      const items = activeGalleryItems();
+      if (items.length === 0) return;
+      
+      if (index < 0) index = items.length - 1;
+      if (index >= items.length) index = 0;
+      currentIndex = index;
+
+      const currentItem = items[currentIndex];
+      // Get the high-res image if available, else fallback
+      const imgSrc = currentItem.getAttribute('data-image');
+      const imgTitle = currentItem.getAttribute('data-title');
+
+      // Fade out image slightly before changing src
+      lightboxImg.style.opacity = '0.5';
+      
+      // Preload image to avoid flicker
+      const img = new Image();
+      img.onload = () => {
+          lightboxImg.src = imgSrc;
+          lightboxImg.style.opacity = '1';
+      };
+      img.src = imgSrc;
+      
+      lightboxCaption.textContent = imgTitle;
+
+      lightbox.classList.remove('opacity-0', 'pointer-events-none');
+      lightbox.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('opacity-100');
+      lightbox.classList.add('opacity-0', 'pointer-events-none');
+      document.body.style.overflow = '';
+      // Clear image source after fade out to prevent it showing briefly next time
+      setTimeout(() => {
+          lightboxImg.src = '';
+      }, 300);
+    }
+
+    galleryItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const visibleItems = activeGalleryItems();
+        const visibleIdx = visibleItems.indexOf(item);
+        openLightbox(visibleIdx);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent clicking background
+      openLightbox(currentIndex - 1);
+    });
+    
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent clicking background
+      openLightbox(currentIndex + 1);
+    });
+
+    // Close when clicking outside image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('pointer-events-none')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
+        if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
+      }
+    });
+
+    // Mobile Swipe Support for Lightbox
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const SWIPE_THRESHOLD = 50;
+
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      if (touchEndX < touchStartX - SWIPE_THRESHOLD) {
+        // Swiped left, go next
+        openLightbox(currentIndex + 1);
+      }
+      if (touchEndX > touchStartX + SWIPE_THRESHOLD) {
+        // Swiped right, go prev
+        openLightbox(currentIndex - 1);
+      }
+    }
+
+    // 7. Animated Statistics Counters
+    const counters = document.querySelectorAll('.counter');
+    let animatedCounters = new Set();
+
+    function runCounter(counter) {
+      if (animatedCounters.has(counter)) return;
+      
+      const target = +counter.getAttribute('data-target');
+      let count = 0;
+      // Adjust speed based on target size
+      const speed = target / 30;
+
+      const updateCount = () => {
+        count += speed;
+        if (count < target) {
+          counter.textContent = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = target;
+          animatedCounters.add(counter);
+        }
+      };
+      
+      requestAnimationFrame(updateCount);
+    }
+
+    // Only observe the section containing counters
+    const statsSection = document.querySelector('.counter')?.closest('section');
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              counters.forEach(counter => runCounter(counter));
+              // Once animated, we don't need to observe anymore
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+        
+        statsObserver.observe(statsSection);
+    }
+
+    // 8. Back to Top Smooth Trigger
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopButton.classList.add('opacity-100');
+      } else {
+        backToTopButton.classList.remove('opacity-100');
+        backToTopButton.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }, { passive: true });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 9. Intersection Observer for Scroll Reveals
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 10. Interactive Mouse Spotlight Effect for Bento Cards
+    document.querySelectorAll('.spotlight-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+  </script>
+</body>
+</html>
